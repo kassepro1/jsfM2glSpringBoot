@@ -1,0 +1,12 @@
+server:
+  context-path: /boot
+  port: 9090
+
+spring:
+  datasource:
+    url: jdbc:mysql://localhost:3306/jsf
+    username: root
+    password:
+  jpa:
+    hibernate:
+      ddl-auto: update

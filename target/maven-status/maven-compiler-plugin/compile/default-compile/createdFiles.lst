@@ -1,0 +1,4 @@
+com\codenotfound\primefaces\model\Car.class
+com\codenotfound\primefaces\SpringPrimeFacesApplication.class
+com\codenotfound\primefaces\view\CarsView.class
+com\codenotfound\primefaces\repository\CarRepository.class

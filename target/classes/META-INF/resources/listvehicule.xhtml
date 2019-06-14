@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html lang="fr"
+      xmlns="http://www.w3.org/1999/xhtml"
+      xmlns:f="http://java.sun.com/jsf/core"
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:ui="http://java.sun.com/jsf/facelets">
+<h:head>
+  <meta charset="utf-8" name="viewport" content="width=device-width, initial-scale=1" http-equiv="X-UA-Conpatible" />
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" />
+  <title>Liste VEHICULE</title>
+  <style type="text/css">
+    .btnWidth {
+      width: 150px;
+    }
+    .ui-datatable .ui-datatable-header {
+      text-align: right !important;
+    }
+
+    .ui-button-text-only .ui-button-text {
+      padding: 0.3em 0.4em;
+    }
+
+    .ui-selectcheckboxmenu-panel .ui-selectcheckboxmenu-header .ui-chkbox {
+      visibility: hidden;
+    }
+
+    .ui-filter-column .ui-column-customfilter .custom-filter {
+      width: 100%;
+      box-sizing: border-box;
+    }
+
+    .year-spinner input {
+      width: 100%;
+      box-sizing: border-box;
+    }
+  </style>
+</h:head>
+<h:body>
+  <center><h2><h:outputText value="Liste de Clients"/></h2></center>
+  <h:form id="listeClient">
+    <h:dataTable id="clientTable" binding="#{table}" value="#{ClientBean.clients}" var="c" class="table table-striped table-hover table-bordered tableUpdated">
+      <h:column>
+        <f:facet name="header">Id</f:facet>
+        <h:outputText value="#{table.rowIndex + 1}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">CIN</f:facet>
+        <h:outputText value="#{c.numpiece}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">Prenom</f:facet>
+        <h:outputText value="#{c.prenom}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">Nom</f:facet>
+        <h:outputText value="#{c.nom}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">Adresse</f:facet>
+        <h:outputText value="#{c.adresse}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">Tel</f:facet>
+        <h:outputText value="#{c.tel}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">Email</f:facet>
+        <h:outputText value="#{c.email}" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">Date Naissance</f:facet>
+        <h:outputText value="#{c.datenais}"/>
+      </h:column>
+      <h:column>
+        <f:facet name="header">MAJ</f:facet>
+        <h:commandButton action="#{ClientBean.editClient(c.numpiece)}" value="MODIFIER" class="btn btn-primary" />
+      </h:column>
+      <h:column>
+        <f:facet name="header">LOCATION</f:facet>
+        <h:commandButton action="#{ClientBean.findClient(c.numpiece)}" value="LOUER" class="btn btn-primary" />
+      </h:column>
+    </h:dataTable>
+    <center>
+      <h:commandButton action="AddClient.xhtml?faces-redirect=true" value="Cree un Nouveau Client" class="btn btn-success btnSpace" />
+    </center>
+  </h:form>
+</h:body>
+</html>

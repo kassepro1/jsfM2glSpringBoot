@@ -1,0 +1,19 @@
+
+fsquid:S00100P"NRename this method name to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(ŸÚñà
+:squid:S1148B"#Use a logger to log this exception.(Ç’Çê
+Asquid:S1948"*Make "vehicule" transient or serializable.(ÕÀÏ
+T
+squid:S106V"9Replace this use of System.out or System.err by a logger.(÷ Öèşÿÿÿÿ
+c$squid:AssignmentInSubExpressionCheck&".Extract the assignment out of this expression.(ÒÂ¿ıøÿÿÿÿ
+gsquid:CommentedOutCodeLine0"<This block of commented-out lines of code should be removed.(¿Ù½øÿÿÿÿ
+gsquid:CommentedOutCodeLineK"<This block of commented-out lines of code should be removed.(«äÅşÿÿÿÿ
+O
+squid:S106J"9Replace this use of System.out or System.err by a logger.(âÈÅ‰
+T
+squid:S106="9Replace this use of System.out or System.err by a logger.(øåù‚øÿÿÿÿ
+Gsquid:S1948"+Make "vehicules" transient or serializable.(†Òˆ¬ÿÿÿÿÿ
+Psquid:S1948"4Make "vehiculeRepository" transient or serializable.(†Ûà‚ûÿÿÿÿ
+T
+squid:S106?"9Replace this use of System.out or System.err by a logger.(êŸÜóüÿÿÿÿ
+˜squid:S11865"€Add a nested comment explaining why this method is empty, throw an UnsupportedOperationException or complete the implementation.( Üó
+bsquid:CommentedOutCodeLineM"<This block of commented-out lines of code should be removed.(ïá×™
